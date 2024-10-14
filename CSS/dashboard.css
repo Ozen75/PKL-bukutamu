@@ -52,8 +52,12 @@ body {
     color: #ffffff;
     flex-direction: column;
     align-items: center;
-    font-size: 15px;
-    margin-bottom: 20px;
+    font-size: 12px;
+    margin-bottom: 40px;
+}
+
+.logo h1 {
+    margin: 0;
 }
 
 .logo_asta {
@@ -61,7 +65,7 @@ body {
     height: auto;
 }
 
-/* Styling untuk menu */
+
 .menu {
     display: flex;
     flex-direction: column;
@@ -79,24 +83,24 @@ body {
 }
 
 .menu a i {
-    margin-right: 20px; /* Jarak antara ikon dan teks */
+    margin-right: 30px; /* Jarak antara ikon dan teks */
 }
 
 .menu a::before {
     content: "";
     position: absolute;
     top: 0;
-    left: -100%; /* Mulai dari luar layar (sebelah kiri) */
+    left: -100%;
     width: 90%;
     height: 100%;
     background-color: #0B85AE;
-    transition: all .5s ease; /* Efek animasi */
+    transition: all .5s ease;
     border-radius: 0 20px 20px 0; /* Melengkung di ujung kanan */
-    z-index: -1; /* Agar tidak menutupi teks */
+    z-index: -1;
 }
 
 .menu a:hover::before {
-    left: 0; /* Animasi bergerak ke kanan */
+    left: 0;
 }
 
 .akhir {
@@ -115,10 +119,12 @@ body {
     color: white;
     background-color: #035571;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
     transition: background .3s;
 }
-
+.akhir a i {
+    margin-right: 30px;
+}
 .akhir a:hover {
     background-color: #01445a;
 }
