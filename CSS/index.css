@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(../Images/bg.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    text-align: center;
+}
+
+.logo img {
+    display: flexbox;
+    width: 200px; /* Atur ukuran logo */
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: #d9f7f5; /* Warna latar belakang kartu */
+    padding: 25px 75px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+    display: block;
+    margin: 0px auto;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    /* font-weight: bold; */
+    cursor: pointer;
+}
+
+.identity {
+    font-size: 20px;
+    background-color: #176b87;
+    color: white;
+    margin-bottom: 20px;
+    width: 250px;
+}
+
+.masuk {
+    background-color: #0ab74f;
+    color: white;
+    width: 150px;
+}
