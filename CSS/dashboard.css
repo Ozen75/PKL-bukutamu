@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f2f8ff;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'poppins', sans-serif;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    background-color: #04364A;
+}
+
+.nama_admin {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 18px;
+    gap: 10px;
+    color: #f2f8ff;
+}
+
+.img_admin {
+    width: 50px; 
+    height: 50px; 
+    object-fit: cover; 
+    border-radius: 50%;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background-color: #176B87;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    transition: .3s;
+}
+
+.logo {
+    display: flex;
+    color: #ffffff;
+    flex-direction: column;
+    align-items: center;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.logo_asta {
+    width: 80px; 
+    height: auto;
+}
+
+/* Styling untuk menu */
+.menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.menu a {
+    position: relative;
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    overflow: hidden;
+}
+
+.menu a i {
+    margin-right: 20px; /* Jarak antara ikon dan teks */
+}
+
+.menu a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%; /* Mulai dari luar layar (sebelah kiri) */
+    width: 90%;
+    height: 100%;
+    background-color: #0B85AE;
+    transition: all .5s ease; /* Efek animasi */
+    border-radius: 0 20px 20px 0; /* Melengkung di ujung kanan */
+    z-index: -1; /* Agar tidak menutupi teks */
+}
+
+.menu a:hover::before {
+    left: 0; /* Animasi bergerak ke kanan */
+}
+
+.akhir {
+    padding: 0;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    left: 0;
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+}
+
+.akhir a {
+    padding: 10px 20px;
+    color: white;
+    background-color: #035571;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background .3s;
+}
+
+.akhir a:hover {
+    background-color: #01445a;
+}
