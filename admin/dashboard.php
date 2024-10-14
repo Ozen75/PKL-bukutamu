@@ -1,9 +1,9 @@
 <?php
 session_start();
-include 'koneksi.php';
+include '../koneksi.php';
 
 $sql_anggota = "SELECT COUNT(*) as total_anggota FROM anggota";
-$result_anggota = $conn->query($sql_jumlah_barang);
+$result_anggota = $conn->query($sql_anggota);
 $row_anggota = $result_anggota->fetch_assoc();
 $total_anggota = $row_anggota['total_anggota'];
 
