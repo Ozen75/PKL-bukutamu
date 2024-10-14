@@ -48,6 +48,7 @@ body {
 }
 
 .logo {
+    margin-top: 10px;
     display: flex;
     color: #ffffff;
     flex-direction: column;
@@ -126,5 +127,5 @@ body {
     margin-right: 30px;
 }
 .akhir a:hover {
-    background-color: #01445a;
+    background-color: #04364A;
 }
