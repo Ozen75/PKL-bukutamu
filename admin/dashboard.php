@@ -1,6 +1,16 @@
 <?php
 session_start();
 include 'koneksi.php';
+
+$sql_anggota = "SELECT COUNT(*) as total_anggota FROM anggota";
+$result_anggota = $conn->query($sql_jumlah_barang);
+$row_anggota = $result_anggota->fetch_assoc();
+$total_anggota = $row_anggota['total_anggota'];
+
+$sql_buku_tamu = "SELECT COUNT(*) as total_buku_tamu FROM buku_tamu";
+$result_buku_tamu = $conn->query($sql_buku_tamu);
+$row_buku_tamu = $result_buku_tamu->fetch_assoc();
+$total_buku_tamu = $row_buku_tamu['total_buku_tamu'];
 ?>
 
 <!DOCTYPE html>
