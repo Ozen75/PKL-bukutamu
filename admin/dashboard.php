@@ -42,7 +42,7 @@ $total_buku_tamu = $row_buku_tamu['total_buku_tamu'];
         </div>
         <div class="menu" id="menu">    
             <a href="dashboard.php"><i class='bx bxs-home'></i>Dashboard</a>
-            <a href="anggota.php"><i class='bx bxs-user'></i>Anggota</a>
+            <a href="anggota/index.php"><i class='bx bxs-user'></i>Anggota</a>
             <a href="buku_tamu.php"><i class='bx bxs-book'></i>Buku Tamu</a>
         </div>
         <div class="akhir">
@@ -61,7 +61,7 @@ $total_buku_tamu = $row_buku_tamu['total_buku_tamu'];
                 </div>
             </div>
             <div class="card">
-                <H1><?php echo $total_buku_tamu; ?></H1>
+                <h1><?php echo $total_buku_tamu; ?></h1>
                 <h3>Buku Tamu</h3>
                 <div class="card-footer">
                     <i class='bx bxs-book'></i>
