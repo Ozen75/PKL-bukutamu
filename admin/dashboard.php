@@ -55,16 +55,16 @@ $total_buku_tamu = $row_buku_tamu['total_buku_tamu'];
         <div class="card-container">
             <div class="card">
                 <h1><?php echo $total_anggota; ?></h1>
-                <i class='bx bx-right-arrow-alt'></i>
+                <h3>Anggota</h3>
                 <div class="card-footer">
-                    <h3>Anggota</h3>
+                    <i class='bx bxs-user'></i>
                 </div>
             </div>
             <div class="card">
                 <H1><?php echo $total_buku_tamu; ?></H1>
-                <i class='bx bx-right-arrow-alt'></i>
+                <h3>Buku Tamu</h3>
                 <div class="card-footer">
-                    <h3>Buku Tamu</h3>
+                    <i class='bx bxs-book'></i>
                 </div>
             </div>
         </div>
