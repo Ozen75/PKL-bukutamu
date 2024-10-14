@@ -1,3 +1,8 @@
+<?php
+session_start();
+include 'koneksi.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,5 +39,25 @@
             <a href="logout.php"><i class='bx bxs-log-out' ></i> Keluar</a>
         </div>
      </section>
+
+     <!-- Card Section -->
+    <section class="content">
+        <div class="card-container">
+            <div class="card">
+                <h1><?php echo $total_anggota; ?></h1>
+                <i class='bx bx-right-arrow-alt'></i>
+                <div class="card-footer">
+                    <h3>Anggota</h3>
+                </div>
+            </div>
+            <div class="card">
+                <H1><?php echo $total_buku_tamu; ?></H1>
+                <i class='bx bx-right-arrow-alt'></i>
+                <div class="card-footer">
+                    <h3>Buku Tamu</h3>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
