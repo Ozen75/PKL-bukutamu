@@ -49,7 +49,7 @@ if (isset($_GET['nim'])) {
     <!-- Form Section -->
     <section class="content">
         <h2>Edit Anggota</h2>
-        <form action="CRUD/edit.php" method="POST" class="form-anggota">
+        <form action="CRUD/update.php" method="POST" class="form-anggota">
             <div class="form-group">
                 <label for="nim">NIM</label>
                 <input type="text" id="nim" name="nim" required value="<?= $anggota[0]["nim"]; ?>">
