@@ -211,3 +211,47 @@ th {
 .hapus:hover i {
     background-color: #2d837d; 
 }
+
+.form-anggota {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    width: 50%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.form-anggota .form-group {
+    margin-bottom: 15px;
+}
+
+.form-anggota label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #04364A;
+}
+
+.form-anggota input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.tombol-submit {
+    background-color: #0B85AE;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.tombol-submit:hover {
+    background-color: #04364A;
+}
