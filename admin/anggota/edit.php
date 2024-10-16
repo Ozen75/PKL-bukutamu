@@ -60,7 +60,7 @@ if (isset($_GET['nim'])) {
             </div>
             <div class="form-group">
                 <label for="jenis_kelamin">Jenis Kelamin</label>
-                <select name="jenis_kelamin" id="jenis_kelamin" value="<?= $anggota[0]["jenis_kelamin"]; ?>">
+                <select name="jenis_kelamin" id="jenis_kelamin" value="<?= $anggota[0]["jenis_kelamin"]; ?>" class="form-select">
                     <option value="laki laki">Laki Laki</option>
                     <option value="perempuan">Perempuan</option>
                 </select>
@@ -75,7 +75,7 @@ if (isset($_GET['nim'])) {
             </div>
             <div class="form-group">
                 <label for="prodi">Prodi</label>
-                <select name="prodi" id="prodi" value="<?= $anggota[0]["prodi"]; ?>">
+                <select name="prodi" id="prodi" value="<?= $anggota[0]["prodi"]; ?>" class="form-select">
                     <option value="informatika">Informatika</option>
                     <option value="sistem informasi">Sistem Informasi</option>
                     <option value="teknologi informasi">Teknologi Informasi</option>
@@ -83,7 +83,7 @@ if (isset($_GET['nim'])) {
             </div>
             <div class="form-group">
                 <label for="angkatan">Angkatan</label>
-                <select name="angkatan" id="angkatan" value="<?= $anggota[0]["angkatan"]; ?>">
+                <select name="angkatan" id="angkatan" value="<?= $anggota[0]["angkatan"]; ?>" class="form-select">
                     <option value="I">I</option>
                     <option value="II">II</option>
                     <option value="II">III</option>

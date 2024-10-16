@@ -1,8 +1,8 @@
 <?php
 include '../../koneksi.php';
 
-$anggota = anggota("SELECT * FROM anggota")
-    ?>
+$anggota = anggota("SELECT * FROM anggota");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,6 +16,17 @@ $anggota = anggota("SELECT * FROM anggota")
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,500&display=swap"
         rel="stylesheet">
     <title>Buku Tamu</title>
+
+    <!-- Add this JavaScript function for delete confirmation -->
+    <script>
+        function confirmDelete(nim) {
+            if (confirm("Apakah Anda yakin ingin menghapus data anggota dengan NIM " + nim + "?")) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -77,7 +88,7 @@ $anggota = anggota("SELECT * FROM anggota")
                         <td><?= $row["angkatan"] ?></td>
                         <td class="aksi">
                             <a href="edit.php?nim=<?= $row['nim']; ?>" class="edit"><i class='bx bx-edit'></i></a>
-                            <form action="CRUD/delete.php" method="get">
+                            <form action="CRUD/delete.php" method="get" onsubmit="return confirmDelete('<?= $row['nim']; ?>')">
                                 <input type="hidden" name="nim" value="<?= $row['nim']; ?>">
                                 <button type="submit" class="hapus"><i class='bx bx-trash'></i></button>
                             </form>

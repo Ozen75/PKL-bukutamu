@@ -51,7 +51,7 @@ include '../koneksi.php';
             </div>
             <div class="form-group">
                 <label for="jenis_kelamin">Jenis Kelamin</label>
-                <select name="jenis_kelamin" id="jenis_kelamin">
+                <select name="jenis_kelamin" id="jenis_kelamin" class="form-select">
                     <option value="laki laki">Laki Laki</option>
                     <option value="perempuan">Perempuan</option>
                 </select>
@@ -66,7 +66,7 @@ include '../koneksi.php';
             </div>
             <div class="form-group">
                 <label for="prodi">Prodi</label>
-                <select name="prodi" id="prodi">
+                <select name="prodi" id="prodi" class="form-select">
                     <option value="informatika">Informatika</option>
                     <option value="sistem informasi">Sistem Informasi</option>
                     <option value="teknologi informasi">Teknologi Informasi</option>
@@ -74,10 +74,10 @@ include '../koneksi.php';
             </div>
             <div class="form-group">
                 <label for="angkatan">Angkatan</label>
-                <select name="angkatan" id="angkatan">
+                <select name="angkatan" id="angkatan" class="form-select">
                     <option value="I">I</option>
                     <option value="II">II</option>
-                    <option value="II">III</option>
+                    <option value="III">III</option>
                 </select>
             </div>
             <button type="submit" class="tombol-submit">Tambah Anggota</button>

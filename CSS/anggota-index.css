@@ -195,21 +195,31 @@ th {
     transition: color .5s ease; 
 }
 
+.hapus {
+    background-color: rgb(0, 216, 216);
+    border: none; /* Remove border */
+    padding: 0;
+    margin: 0;
+    border-radius: 5px; /* Optional: rounded edges */
+    margin-top: 5px;
+}
+
 .hapus i {
     color: rgb(255, 255, 255);
     font-size: 18px;
-    background-color: #64CCC5;
-    padding: 5px;
-    border-radius: 5px;
-    transition: color .5s ease; 
+    background-color: transparent; /* Ensure background is transparent */
+    padding: 5px; /* Add a slight padding if needed */
+    transition: background-color .15s ease;
+    border-radius: 5px; /* Optional: rounded edges */
+}
+
+.hapus:hover i {
+    background-color: rgb(0, 196, 196); /* Red hover color */
+    color: white; /* Change icon color to white on hover */
 }
 
 .edit:hover i {
     background-color: #055e7c;
-}
-
-.hapus:hover i {
-    background-color: #2d837d; 
 }
 
 .form-anggota {
@@ -239,6 +249,27 @@ th {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
+}
+
+.form-anggota select.form-select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #04364A;
+    cursor: pointer;
+    transition: border 0.3s ease;
+}
+
+.form-anggota select.form-select:focus {
+    border-color: #0B85AE;
+}
+
+.form-anggota option {
+    color: #04364A;
 }
 
 .tombol-submit {
