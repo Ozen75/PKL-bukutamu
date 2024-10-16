@@ -1,4 +1,8 @@
+<?php 
+    include'../../koneksi.php';
 
+    $anggota = anggota("SELECT * FROM anggota")
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +31,7 @@
                 <h1>Buku Tamu</h1>
             </div>
             <div class="menu" id="menu">    
-                <a href="../dashboard.php"><i class='bx bxs-home'></i>Dashboard</a>
+                <a href="../"><i class='bx bxs-home'></i>Dashboard</a>
                 <a href="index.php"><i class='bx bxs-user'></i>Anggota</a>
                 <a href="buku_tamu.php"><i class='bx bxs-book'></i>Buku Tamu</a>
             </div>
@@ -59,8 +63,23 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php
-                    ?>
+                    <?php $no = 1; ?>
+                    <?php foreach( $anggota as $row ): ?>
+                    <tr>
+                        <td><?= $no; ?></td>
+                        <td><?= $row["nim"]?></td>
+                        <td><?= $row["nama"]?></td>
+                        <td><?= $row["jenis_kelamin"]?></td>
+                        <td><?= $row["no_telp"]?></td>
+                        <td><?= $row["alamat"]?></td>
+                        <td><?= $row["prodi"]?></td>
+                        <td><?= $row["angkatan"]?></td>
+                        <td><a href="#">edit</a>
+                            <a href="#">hapus</a>
+                        </td>
+                    </tr>
+                    <?php $no++; ?>
+                    <?php endforeach ?>
                 </tbody>
             </table>
         </section>
