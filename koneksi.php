@@ -5,7 +5,7 @@ if (mysqli_connect_errno()) {
     printf("", mysqli_connect_error());
 }
 
-function query($query){
+function anggota($query){
     global $conn;
     $result = mysqli_query($conn, $query);
     $rows = [];
