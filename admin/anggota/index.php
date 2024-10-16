@@ -75,7 +75,7 @@
                         <td><?= $row["prodi"]?></td>
                         <td><?= $row["angkatan"]?></td>
                         <td><a href="#">edit</a>
-                            <a href="#">hapus</a>
+                            <a href="#">happus</a>
                         </td>
                     </tr>
                     <?php $no++; ?>
