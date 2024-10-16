@@ -140,9 +140,8 @@ body {
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 100px;
+    margin-top: 20px;
     font-size: 15px;
-    border-radius: 200px;
 }
 
 table, th, td {
@@ -150,11 +149,29 @@ table, th, td {
     background-color: #EFE8FF;
     padding: 10px;
     text-align: center;
-    border-bottom: 1px solid #04364A;
+    border-bottom: 1px solid #000000;
 }
 
 th {
     background-color: #04364A;
     color: #ffffff;
     text-align: center;
+}
+
+.tombol {
+    display: flexbox;
+    padding: 10px 0px;
+    font-size: 18px;
+    text-align: center;
+    width: 50%;
+    margin-top: 50px;
+    background-color: #04364A;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.tombol:hover { 
+    background-color: #110A26;
 }
