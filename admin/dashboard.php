@@ -35,7 +35,7 @@ $total_buku_tamu = $row_buku_tamu['total_buku_tamu'];
     </section>
 
     <!-- sidebar -->
-     <section class="sidebar">
+    <section class="sidebar">
         <div class="logo">
             <img src="../Images/logo_pro_asta.png" alt="logo" class="logo_asta">
             <h1>Buku Tamu</h1>
@@ -48,9 +48,9 @@ $total_buku_tamu = $row_buku_tamu['total_buku_tamu'];
         <div class="akhir">
             <a href="logout.php"><i class='bx bxs-log-out' ></i> Keluar</a>
         </div>
-     </section>
+    </section>
 
-     <!-- Card Section -->
+    <!-- Card Section -->
     <section class="content">
         <div class="card-container">
             <div class="card">
