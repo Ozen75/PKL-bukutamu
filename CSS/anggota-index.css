@@ -192,7 +192,7 @@ th {
     background-color: #0B85AE;
     padding: 5px;
     border-radius: 5px;
-    transition: color .5s ease; 
+    transition: background-color .15s ease;
 }
 
 .hapus {
@@ -215,34 +215,36 @@ th {
 
 .hapus:hover i {
     background-color: rgb(0, 196, 196); /* Red hover color */
-    color: white; /* Change icon color to white on hover */
 }
 
 .edit:hover i {
-    background-color: #055e7c;
+    background-color: #60b6d3;
 }
 
 .form-anggota {
     background-color: #fff;
     padding: 20px;
     margin: 20px auto;
-    width: 50%;
+    width: 95%;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
 
-.form-anggota .form-group {
+.form-group {
     margin-bottom: 15px;
+    display: flex;
+    align-items: center;  
 }
 
-.form-anggota label {
+.form-group label {
     display: block;
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 5px;
     color: #04364A;
+    margin-right: 10px; 
 }
 
-.form-anggota input {
+.form-group input {
     width: 100%;
     padding: 10px;
     font-size: 16px;
@@ -272,6 +274,15 @@ th {
     color: #04364A;
 }
 
+.form-group label {
+    width: 100px;
+    margin-right: 10px; 
+}
+
+.form-group input {
+    flex: 1; 
+    padding: 5px;
+}
 .tombol-submit {
     background-color: #0B85AE;
     color: white;
@@ -286,3 +297,4 @@ th {
 .tombol-submit:hover {
     background-color: #04364A;
 }
+

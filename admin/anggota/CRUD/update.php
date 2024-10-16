@@ -12,7 +12,7 @@ $prodi = $_POST['prodi'];
 $angkatan = $_POST['angkatan'];
 
 // update data ke database
-mysqli_query($koneksi, "update mahasiswa set nim='$nim', nama='$nama', jenis_kelamin='$jenis_kelamin', no_telp='$no_telp', alamat='$alamat', prodi='$prodi', angkatan='$angkatan' where nim='$nim'");
+mysqli_query($koneksi, "update anggota set nim='$nim', nama='$nama', jenis_kelamin='$jenis_kelamin', no_telp='$no_telp', alamat='$alamat', prodi='$prodi', angkatan='$angkatan' where nim='$nim'");
 
 // mengalihkan halaman kembali ke index.php
-header("location:../");
+header("location:../../tambah.php");
