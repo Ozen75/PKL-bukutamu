@@ -1,24 +1,18 @@
 <?php
 session_start();
-include '../koneksi.php';
+include '../../koneksi.php';
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $nama_anggota = $_POST['nama_anggota'];
-    $alamat = $_POST['alamat'];
-    $no_telp = $_POST['no_telp'];
+if (isset($_GET['nim'])) {
+    $nim = $_GET['nim'];
 
-    $sql = "INSERT INTO anggota (nama_anggota, alamat, no_telp) VALUES ('$nama_anggota', '$alamat', '$no_telp')";
-    
-    if ($conn->query($sql) === TRUE) {
-        echo "<script>alert('Anggota berhasil ditambahkan!');</script>";
-    } else {
-        echo "<script>alert('Terjadi kesalahan saat menambahkan anggota.');</script>";
-    }
+    // Fetch the anggota row by nim
+    $anggota = anggota("SELECT * FROM anggota WHERE nim = '$nim'");
 }
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,6 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Edit Anggota</title>
 </head>
+
 <body>
     <!-- Navbar -->
     <section class="navbar">
@@ -41,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <img src="../../Images/logo_pro_asta.png" alt="logo" class="logo_asta">
             <h1>Buku Tamu</h1>
         </div>
-        <div class="menu" id="menu">    
+        <div class="menu" id="menu">
             <a href="index.php"><i class='bx bxs-home'></i>Dashboard</a>
             <a href="index.php"><i class='bx bxs-user'></i>Anggota</a>
             <a href="buku_tamu.php"><i class='bx bxs-book'></i>Buku Tamu</a>
@@ -57,34 +52,46 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <form action="" method="POST" class="form-anggota">
             <div class="form-group">
                 <label for="nim">NIM</label>
-                <input type="text" id="nim" name="nim" required>
+                <input type="text" id="nim" name="nim" required value="<?= $anggota[0]["nim"]; ?>">
             </div>
             <div class="form-group">
                 <label for="nama">Nama</label>
-                <input type="text" id="nama" name="nama" required>
+                <input type="text" id="nama" name="nama" required value="<?= $anggota[0]["nama"]; ?>">
             </div>
             <div class="form-group">
                 <label for="jenis_kelamin">Jenis Kelamin</label>
-                <input type="text" id="jenis_kelamin" name="jenis_kelamin" required>
+                <select name="jenis_kelamin" id="jenis_kelamin" value="<?= $anggota[0]["jenis_kelamin"]; ?>">
+                    <option value="laki laki">Laki Laki</option>
+                    <option value="perempuan">Perempuan</option>
+                </select>
             </div>
             <div class="form-group">
                 <label for="no_telp">No. Telp</label>
-                <input type="text" id="no_telp" name="no_telp" required>
+                <input type="text" id="no_telp" name="no_telp" required value="<?= $anggota[0]["no_telp"]; ?>">
             </div>
             <div class="form-group">
                 <label for="alamat">Alamat</label>
-                <input type="text" id="alamat" name="alamat" required>
+                <input type="text" id="alamat" name="alamat" required value="<?= $anggota[0]["alamat"]; ?>">
             </div>
             <div class="form-group">
                 <label for="prodi">Prodi</label>
-                <input type="text" id="prodi" name="prodi" required>
+                <select name="prodi" id="prodi" value="<?= $anggota[0]["prodi"]; ?>">
+                    <option value="informatika">Informatika</option>
+                    <option value="sistem informasi">Sistem Informasi</option>
+                    <option value="teknologi informasi">Teknologi Informasi</option>
+                </select>
             </div>
             <div class="form-group">
                 <label for="angkatan">Angkatan</label>
-                <input type="text" id="angkatan" name="angkatan" required>
+                <select name="angkatan" id="angkatan" value="<?= $anggota[0]["angkatan"]; ?>">
+                    <option value="I">I</option>
+                    <option value="II">II</option>
+                    <option value="II">III</option>
+                </select>
             </div>
             <button type="submit" class="tombol-submit">Ubah Data</button>
         </form>
     </section>
 </body>
+
 </html>

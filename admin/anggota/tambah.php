@@ -1,20 +1,6 @@
 <?php
 session_start();
 include '../koneksi.php';
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $nama_anggota = $_POST['nama_anggota'];
-    $alamat = $_POST['alamat'];
-    $no_telp = $_POST['no_telp'];
-
-    $sql = "INSERT INTO anggota (nama_anggota, alamat, no_telp) VALUES ('$nama_anggota', '$alamat', '$no_telp')";
-    
-    if ($conn->query($sql) === TRUE) {
-        echo "<script>alert('Anggota berhasil ditambahkan!');</script>";
-    } else {
-        echo "<script>alert('Terjadi kesalahan saat menambahkan anggota.');</script>";
-    }
-}
 ?>
 
 <!DOCTYPE html>
@@ -54,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <!-- Form Section -->
     <section class="content">
         <h2>Tambah Anggota</h2>
-        <form action="" method="POST" class="form-anggota">
+        <form action="CRUD/tambah_aksi.php" method="POST" class="form-anggota">
             <div class="form-group">
                 <label for="nim">NIM</label>
                 <input type="text" id="nim" name="nim" required>
@@ -65,7 +51,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
             <div class="form-group">
                 <label for="jenis_kelamin">Jenis Kelamin</label>
-                <input type="text" id="jenis_kelamin" name="jenis_kelamin" required>
+                <select name="jenis_kelamin" id="jenis_kelamin">
+                    <option value="laki laki">Laki Laki</option>
+                    <option value="perempuan">Perempuan</option>
+                </select>
             </div>
             <div class="form-group">
                 <label for="no_telp">No. Telp</label>
@@ -77,11 +66,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
             <div class="form-group">
                 <label for="prodi">Prodi</label>
-                <input type="text" id="prodi" name="prodi" required>
+                <select name="prodi" id="prodi">
+                    <option value="informatika">Informatika</option>
+                    <option value="sistem informasi">Sistem Informasi</option>
+                    <option value="teknologi informasi">Teknologi Informasi</option>
+                </select>
             </div>
             <div class="form-group">
                 <label for="angkatan">Angkatan</label>
-                <input type="text" id="angkatan" name="angkatan" required>
+                <select name="angkatan" id="angkatan">
+                    <option value="I">I</option>
+                    <option value="II">II</option>
+                    <option value="II">III</option>
+                </select>
             </div>
             <button type="submit" class="tombol-submit">Tambah Anggota</button>
         </form>
