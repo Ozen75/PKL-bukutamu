@@ -42,30 +42,30 @@ include '../../koneksi.php';
         <h2>Tambah Anggota</h2>
         <form action="CRUD/tambah_aksi.php" method="POST" class="form-anggota">
             <div class="form-group">
-                <label for="nim">NIM :</label>
+                <label for="nim">NIM</label>
                 <input type="text" id="nim" name="nim" required>
             </div>
             <div class="form-group">
-                <label for="nama">Nama :</label>
+                <label for="nama">Nama</label>
                 <input type="text" id="nama" name="nama" required>
             </div>
             <div class="form-group">
-                <label for="jenis_kelamin">Jenis Kelamin :</label>
+                <label for="jenis_kelamin">Jenis Kelamin</label>
                 <select name="jenis_kelamin" id="jenis_kelamin" class="form-select">
                     <option value="laki laki">Laki Laki</option>
                     <option value="perempuan">Perempuan</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="no_telp">No. Telp :</label>
+                <label for="no_telp">No. Telp</label>
                 <input type="text" id="no_telp" name="no_telp" required>
             </div>
             <div class="form-group">
-                <label for="alamat">Alamat :</label>
+                <label for="alamat">Alamat</label>
                 <input type="text" id="alamat" name="alamat" required>
             </div>
             <div class="form-group">
-                <label for="prodi">Prodi :</label>
+                <label for="prodi">Prodi</label>
                 <select name="prodi" id="prodi" class="form-select">
                     <option value="informatika">Informatika</option>
                     <option value="sistem informasi">Sistem Informasi</option>
@@ -73,7 +73,7 @@ include '../../koneksi.php';
                 </select>
             </div>
             <div class="form-group">
-                <label for="angkatan">Angkatan :</label>
+                <label for="angkatan">Angkatan</label>
                 <select name="angkatan" id="angkatan" class="form-select">
                     <option value="I">I</option>
                     <option value="II">II</option>

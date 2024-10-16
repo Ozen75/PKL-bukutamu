@@ -266,24 +266,13 @@ th {
     transition: border 0.3s ease;
 }
 
-.form-anggota select.form-select:focus {
-    border-color: #0B85AE;
-}
-
-.form-anggota option {
-    color: #04364A;
-}
-
 .form-group label {
-    width: 100px;
-    margin-right: 10px; 
+    width: 150px;
+    margin-right: 20px; 
 }
 
-.form-group input {
-    flex: 1; 
-    padding: 5px;
-}
 .tombol-submit {
+    margin-top: 20px;
     background-color: #0B85AE;
     color: white;
     padding: 10px 20px;
