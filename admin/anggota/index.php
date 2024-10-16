@@ -42,9 +42,7 @@
 
         <!-- tabel -->
         <section class="content">
-            <div class="tombol">
-                <a href="tambah.php" class="add">Tambah</a>
-            </div>
+                <a href="tambah.php" class="tombol">Tambah</a>
             <table>
                 <thead>
                     <tr>
@@ -74,8 +72,9 @@
                         <td><?= $row["alamat"]?></td>
                         <td><?= $row["prodi"]?></td>
                         <td><?= $row["angkatan"]?></td>
-                        <td><a href="#">edit</a>
-                            <a href="#">happus</a>
+                        <td class="aksi">
+                            <a href="edit.php" class="edit"><i class='bx bx-edit'></i></a>
+                            <a href="hapus.php" class="hapus"><i class='bx bx-trash'></i></a>
                         </td>
                     </tr>
                     <?php $no++; ?>
