@@ -41,9 +41,9 @@ $total_buku_tamu = $row_buku_tamu['total_buku_tamu'];
             <h1>Buku Tamu</h1>
         </div>
         <div class="menu" id="menu">    
-            <a href="index.php" style="background-color: #0B85AE; color: white; border-radius: 0 20px 20px 0; position: relative; left: -20px; padding-left: 40px;"><i class='bx bxs-home'></i>Dashboard</a>
+            <a href="index.php"><i class='bx bxs-home'></i>Dashboard</a>
             <a href="anggota/index.php"><i class='bx bxs-user'></i>Anggota</a>
-            <a href="buku_tamu.php"><i class='bx bxs-book'></i>Buku Tamu</a>
+            <a href="buku tamu/index.php"><i class='bx bxs-book'></i>Buku Tamu</a>
         </div>
         <div class="akhir">
             <a href="logout.php"><i class='bx bxs-log-out' ></i> Keluar</a>

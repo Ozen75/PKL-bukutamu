@@ -1,0 +1,270 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f2f8ff;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'poppins', sans-serif;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    background-color: #04364A;
+}
+
+.nama_admin {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 18px;
+    gap: 10px;
+    color: #f2f8ff;
+}
+
+.img_admin {
+    width: 50px; 
+    height: 50px; 
+    object-fit: cover; 
+    border-radius: 50%;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background-color: #176B87;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    transition: .3s;
+}
+
+.logo {
+    margin-top: 10px;
+    display: flex;
+    color: #ffffff;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    margin-bottom: 40px;
+}
+
+.logo h1 {
+    margin: 0;
+}
+
+.logo_asta {
+    width: 80px; 
+    height: auto;
+}
+
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.menu a {
+    position: relative;
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    overflow: hidden;
+}
+
+.menu a i {
+    margin-right: 30px; /* Jarak antara ikon dan teks */
+}
+
+.menu a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 90%;
+    height: 100%;
+    background-color: #0B85AE;
+    transition: all .5s ease;
+    border-radius: 0 20px 20px 0; /* Melengkung di ujung kanan */
+    z-index: -1;
+}
+
+.menu a:hover::before {
+    left: 0;
+}
+
+.akhir {
+    padding: 0;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    left: 0;
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+}
+
+.akhir a {
+    padding: 10px 20px;
+    color: white;
+    background-color: #035571;
+    text-decoration: none;
+    font-size: 20px;
+    transition: background .3s;
+}
+.akhir a i {
+    margin-right: 30px;
+}
+.akhir a:hover {
+    background-color: #04364A;
+}
+
+/* desain table */
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    margin-top: 100px;
+    background-color: #f2f8ff;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 15px;
+    border-radius: 200px;
+}
+
+table, th, td {
+    border: 1px #04364A;
+    background-color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #000000;
+}
+
+thead tr:first-child th:first-child {
+    border-top-left-radius: 15px;
+}
+
+thead tr:first-child th:last-child {
+    border-top-right-radius: 15px;
+}
+
+th {
+    background-color: #04364A;
+    color: #ffffff;
+    text-align: center;
+}
+
+.edit i {
+    color: rgb(255, 255, 255); 
+    font-size: 18px;
+    background-color: #0B85AE;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color .15s ease;
+}
+
+.hapus {
+    background-color: rgb(0, 216, 216);
+    border: none; /* Remove border */
+    padding: 0;
+    margin: 0;
+    border-radius: 5px; /* Optional: rounded edges */
+    margin-top: 5px;
+}
+
+.hapus i {
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    background-color: transparent; /* Ensure background is transparent */
+    padding: 5px; /* Add a slight padding if needed */
+    transition: background-color .15s ease;
+    border-radius: 5px; /* Optional: rounded edges */
+}
+
+.hapus:hover i {
+    background-color: rgb(0, 196, 196); /* Red hover color */
+}
+
+.edit:hover i {
+    background-color: #60b6d3;
+}
+
+.form-anggota {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    width: 95%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;  
+}
+
+.form-group label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #04364A;
+    margin-right: 10px; 
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-anggota select.form-select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #04364A;
+    cursor: pointer;
+    transition: border 0.3s ease;
+}
+
+.form-group label {
+    width: 150px;
+    margin-right: 20px; 
+}
+
+.tombol-submit {
+    margin-top: 20px;
+    background-color: #0B85AE;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.tombol-submit:hover {
+    background-color: #04364A;
+}
+
