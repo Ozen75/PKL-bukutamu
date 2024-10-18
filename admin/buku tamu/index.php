@@ -93,8 +93,8 @@ $kunjungan = bukutamu("
                         <td class="aksi">
                             <a href="edit.php?id=<?= $row['id']; ?>" class="edit"><i class='bx bx-edit'></i></a>
                             <form action="CRUD/delete.php" method="get"
-                                onsubmit="return confirmDelete('<?= $row['nim']; ?>')">
-                                <input type="hidden" name="nim" value="<?= $row['nim']; ?>">
+                                onsubmit="return confirmDelete('<?= $row['id']; ?>')">
+                                <input type="hidden" name="id" value="<?= $row['id']; ?>">
                                 <button type="submit" class="hapus"><i class='bx bx-trash'></i></button>
                             </form>
                         </td>

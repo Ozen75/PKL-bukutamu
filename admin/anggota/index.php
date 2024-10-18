@@ -1,7 +1,15 @@
 <?php
 include '../../koneksi.php';
 
+// Ambil semua data anggota
 $anggota = anggota("SELECT * FROM anggota");
+
+// Ambil data nim yang ada di buku tamu
+$buku_tamu_nim = [];
+$buku_tamu = bukutamu("SELECT DISTINCT nim FROM buku_tamu");
+foreach ($buku_tamu as $bt) {
+    $buku_tamu_nim[] = $bt['nim'];
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,13 +25,22 @@ $anggota = anggota("SELECT * FROM anggota");
         rel="stylesheet">
     <title>Buku Tamu</title>
 
-    <!-- Add this JavaScript function for delete confirmation -->
+    <style>
+        /* Tambahkan style untuk tombol hapus yang disabled */
+        .disabled-btn {
+            background-color: #d3d3d3; /* Warna abu-abu */
+            color: #888; /* Warna teks lebih pucat */
+            cursor: not-allowed; /* Tampilkan kursor tidak diizinkan */
+        }
+    </style>
+
     <script>
-        function confirmDelete(nim) {
-            if (confirm("Apakah Anda yakin ingin menghapus data anggota dengan NIM " + nim + "?")) {
-                return true;
-            } else {
+        function confirmDelete(nim, isLinked) {
+            if (isLinked) {
+                alert("Data ini terkait dengan Buku Tamu dan tidak dapat dihapus.");
                 return false;
+            } else {
+                return confirm("Apakah Anda yakin ingin menghapus data anggota dengan NIM " + nim + "?");
             }
         }
     </script>
@@ -46,7 +63,7 @@ $anggota = anggota("SELECT * FROM anggota");
         </div>
         <div class="menu" id="menu">
             <a href="../dashboard.php"><i class='bx bxs-home'></i>Dashboard</a>
-            <a href="index.php"style="background-color: #0B85AE; color: white; border-radius: 0 20px 20px 0; position: relative; left: -20px; padding-left: 40px;"><i class='bx bxs-user'></i>Anggota</a>
+            <a href="index.php" style="background-color: #0B85AE; color: white; border-radius: 0 20px 20px 0; position: relative; left: -20px; padding-left: 40px;"><i class='bx bxs-user'></i>Anggota</a>
             <a href="../buku tamu/index.php"><i class='bx bxs-book'></i>Buku Tamu</a>
         </div>
         <div class="akhir">
@@ -54,7 +71,7 @@ $anggota = anggota("SELECT * FROM anggota");
         </div>
     </section>
 
-    <!-- tabel -->
+    <!-- Tabel anggota -->
     <section class="content">
         <a href="tambah.php" class="tombol">Tambah</a>
         <table>
@@ -88,9 +105,15 @@ $anggota = anggota("SELECT * FROM anggota");
                         <td><?= $row["angkatan"] ?></td>
                         <td class="aksi">
                             <a href="edit.php?nim=<?= $row['nim']; ?>" class="edit"><i class='bx bx-edit'></i></a>
-                            <form action="CRUD/delete.php" method="get" onsubmit="return confirmDelete('<?= $row['nim']; ?>')">
+                            
+                            <!-- Tombol hapus, di-disable jika terkait dengan buku tamu -->
+                            <form action="CRUD/delete.php" method="get" onsubmit="return confirmDelete('<?= $row['nim']; ?>', <?= in_array($row['nim'], $buku_tamu_nim) ? 'true' : 'false'; ?>)">
                                 <input type="hidden" name="nim" value="<?= $row['nim']; ?>">
-                                <button type="submit" class="hapus"><i class='bx bx-trash'></i></button>
+                                
+                                <!-- Tambahkan class 'disabled-btn' jika anggota terhubung dengan buku tamu -->
+                                <button type="submit" class="hapus <?= in_array($row['nim'], $buku_tamu_nim) ? 'disabled-btn' : ''; ?>">
+                                    <i class='bx bx-trash'></i>
+                                </button>
                             </form>
                         </td>
                     </tr>
