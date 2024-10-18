@@ -50,7 +50,7 @@ $kunjungan = bukutamu("
             <h1>Buku Tamu</h1>
         </div>
         <div class="menu" id="menu">
-            <a href="../"><i class='bx bxs-home'></i>Dashboard</a>
+            <a href="../dashboard.php"><i class='bx bxs-home'></i>Dashboard</a>
             <a href="../anggota/index.php"><i class='bx bxs-user'></i>Anggota</a>
             <a href="index.php"
                 style="background-color: #0B85AE; color: white; border-radius: 0 20px 20px 0; position: relative; left: -20px; padding-left: 40px;"><i
