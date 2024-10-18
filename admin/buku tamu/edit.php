@@ -67,11 +67,11 @@ $anggota = anggota("SELECT * FROM anggota")
             </div>
             <div class="form-group">
                 <label for="jam_masuk">Jam Masuk</label>
-                <input type="time" name="jam_masuk" id="jam_masuk" value="<?= $kunjungan[0]["jam_masuk"]; ?>">
+                <input type="time" name="jam_masuk" id="jam_masuk" value="<?= substr($kunjungan[0]["jam_masuk"], 0, 5); ?>">
             </div>
             <div class="form-group">
                 <label for="jam_keluar">Jam Keluar</label>
-                <input type="time" name="jam_keluar" id="jam_keluar" value="<?= $kunjungan[0]["jam_keluar"]; ?>">
+                <input type="time" name="jam_keluar" id="jam_keluar" value="<?= substr($kunjungan[0]["jam_masuk"], 0, 5); ?>">
             </div>
             <div class="form-group">
                 <label for="keperluan">Keperluan</label>
