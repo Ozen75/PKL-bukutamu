@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(../Images/bg.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    text-align: center;
+    color: #012838;
+}
+
+.logo img {
+    display: flexbox;
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: #DAFFFB;
+    padding: 20px 50px;
+    border-radius: 15px;
+    flex-direction: column;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+form {
+    width: 100%;
+    max-width: 400px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #176B87;
+    color: #fff;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+/* CSS untuk tombol submit saat hover */
+input[type="submit"]:hover {
+    background-color: #04364A;
+    transition: 0.3s;
+}
