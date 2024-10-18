@@ -62,7 +62,7 @@ $total_buku_tamu = $row_buku_tamu['total_buku_tamu'];
             </div>
             <div class="card">
                 <h1><?php echo $total_buku_tamu; ?></h1>
-                <h3>Buku Tamu</h3>
+                <h3>Log Buku Tamu</h3>
                 <div class="card-footer">
                     <i class='bx bxs-book'></i>
                 </div>

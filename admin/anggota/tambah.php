@@ -38,7 +38,7 @@ include '../../koneksi.php';
     </section>
 
     <!-- Form Section -->
-    <section class="content">
+    <section class="content_edit">
         <h2>Tambah Anggota</h2>
         <form action="CRUD/tambah_aksi.php" method="POST" class="form-anggota">
             <div class="form-group">

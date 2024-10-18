@@ -137,6 +137,14 @@ body {
     margin-top: 40px;
     background-color: #f2f8ff;
 }
+
+.content_edit {
+    margin-left: 250px;
+    padding: 20px;
+    margin-top: 70px;
+    background-color: #f2f8ff;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -207,7 +215,7 @@ th {
 .hapus i {
     color: rgb(255, 255, 255);
     font-size: 18px;
-    background-color: transparent; /* Ensure background is transparent */
+    background-color: transparent; 
     padding: 5px; /* Add a slight padding if needed */
     transition: background-color .15s ease;
     border-radius: 5px; /* Optional: rounded edges */
@@ -218,7 +226,7 @@ th {
 }
 
 .edit:hover i {
-    background-color: #60b6d3;
+    background-color: #246479;
 }
 
 .form-anggota {

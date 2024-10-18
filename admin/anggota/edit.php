@@ -47,7 +47,7 @@ if (isset($_GET['nim'])) {
     </section>
 
     <!-- Form Section -->
-    <section class="content">
+    <section class="content_edit">
         <h2>Edit Anggota</h2>
         <form action="CRUD/update.php" method="POST" class="form-anggota">
             <div class="form-group">

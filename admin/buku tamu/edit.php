@@ -18,7 +18,7 @@ $anggota = anggota("SELECT * FROM anggota")
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../../CSS/anggota-index.css" />
+    <link rel="stylesheet" type="text/css" href="../../CSS/buku_tamu.css" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Edit Anggota</title>
 </head>
@@ -49,7 +49,7 @@ $anggota = anggota("SELECT * FROM anggota")
     </section>
 
     <!-- Form Section -->
-    <section class="content">
+    <section class="content_edit">
         <h2>Edit Anggota</h2>
         <form action="CRUD/update.php" method="POST" class="form-anggota">
             <input type="hidden" name="id" value="<?= $kunjungan[0]["id"]; ?>">
