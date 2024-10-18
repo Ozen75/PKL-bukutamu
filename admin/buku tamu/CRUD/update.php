@@ -2,14 +2,13 @@
 // koneksi database
 include '../../../koneksi.php';
 
+$id = $_POST['id'];
 $nim = $_POST['nim'];
-$nama = $_POST['nama'];
-$jenis_kelamin = $_POST['jenis_kelamin'];
-$no_telp = $_POST['no_telp'];
-$alamat = $_POST['alamat'];
-$prodi = $_POST['prodi'];
-$angkatan = $_POST['angkatan'];
+$tanggal = $_POST['tanggal'];
+$jam_masuk = $_POST['jam_masuk'];
+$jam_keluar = $_POST['jam_keluar'];
+$keperluan = $_POST['keperluan'];
 
-mysqli_query($conn, "update anggota set nim='$nim', nama='$nama', jenis_kelamin='$jenis_kelamin', no_telp='$no_telp', alamat='$alamat', prodi='$prodi', angkatan='$angkatan' where nim='$nim'");
+mysqli_query($conn, "update buku_tamu set nim='$nim', tanggal='$tanggal', jam_masuk='$jam_masuk', jam_keluar='$jam_keluar', keperluan='$keperluan' where id='$id'");
 
 header("location:../");

@@ -2,12 +2,14 @@
 session_start();
 include '../../koneksi.php';
 
-if (isset($_GET['nim'])) {
-    $nim = $_GET['nim'];
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
 
-    // Fetch the anggota row by nim
-    $anggota = anggota("SELECT * FROM anggota WHERE nim = '$nim'");
+    // Fetch the anggota row by ni  m
+    $kunjungan = bukutamu("SELECT * FROM buku_tamu WHERE id = '$id'");
 }
+$anggota = anggota("SELECT * FROM anggota")
+
 ?>
 
 <!DOCTYPE html>
@@ -50,44 +52,30 @@ if (isset($_GET['nim'])) {
     <section class="content">
         <h2>Edit Anggota</h2>
         <form action="CRUD/update.php" method="POST" class="form-anggota">
+            <input type="hidden" name="id" value="<?= $kunjungan[0]["id"]; ?>">
             <div class="form-group">
                 <label for="nim">NIM</label>
-                <input type="text" id="nim" name="nim" required value="<?= $anggota[0]["nim"]; ?>">
-            </div>
-            <div class="form-group">
-                <label for="nama">Nama</label>
-                <input type="text" id="nama" name="nama" required value="<?= $anggota[0]["nama"]; ?>">
-            </div>
-            <div class="form-group">
-                <label for="jenis_kelamin">Jenis Kelamin</label>
-                <select name="jenis_kelamin" id="jenis_kelamin" value="<?= $anggota[0]["jenis_kelamin"]; ?>" class="form-select">
-                    <option value="laki laki">Laki Laki</option>
-                    <option value="perempuan">Perempuan</option>
+                <select name="nim" id="nim">
+                    <?php foreach ($anggota as $row): ?>
+                    <option value="<?= $row["nim"]?>"><?= $row["nim"]?></option>
+                    <?php endforeach ?>
                 </select>
             </div>
             <div class="form-group">
-                <label for="no_telp">No. Telp</label>
-                <input type="text" id="no_telp" name="no_telp" required value="<?= $anggota[0]["no_telp"]; ?>">
+                <label for="tanggal">Tanggal</label>
+                <input type="date" name="tanggal" id="tanggal" value="<?= $kunjungan[0]["tanggal"]; ?>">
             </div>
             <div class="form-group">
-                <label for="alamat">Alamat</label>
-                <input type="text" id="alamat" name="alamat" required value="<?= $anggota[0]["alamat"]; ?>">
+                <label for="jam_masuk">Jam Masuk</label>
+                <input type="time" name="jam_masuk" id="jam_masuk" value="<?= $kunjungan[0]["jam_masuk"]; ?>">
             </div>
             <div class="form-group">
-                <label for="prodi">Prodi</label>
-                <select name="prodi" id="prodi" value="<?= $anggota[0]["prodi"]; ?>" class="form-select">
-                    <option value="informatika">Informatika</option>
-                    <option value="sistem informasi">Sistem Informasi</option>
-                    <option value="teknologi informasi">Teknologi Informasi</option>
-                </select>
+                <label for="jam_keluar">Jam Keluar</label>
+                <input type="time" name="jam_keluar" id="jam_keluar" value="<?= $kunjungan[0]["jam_keluar"]; ?>">
             </div>
             <div class="form-group">
-                <label for="angkatan">Angkatan</label>
-                <select name="angkatan" id="angkatan" value="<?= $anggota[0]["angkatan"]; ?>" class="form-select">
-                    <option value="I">I</option>
-                    <option value="II">II</option>
-                    <option value="II">III</option>
-                </select>
+                <label for="keperluan">Keperluan</label>
+                <input type="text" name="keperluan" id="keperluan" value="<?= $kunjungan[0]["keperluan"]; ?>">
             </div>
             <button type="submit" class="tombol-submit">Ubah Data</button>
         </form>

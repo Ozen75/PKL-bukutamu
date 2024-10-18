@@ -1,7 +1,12 @@
 <?php
 include '../../koneksi.php';
 
-$anggota = anggota("SELECT * FROM buku_tamu");
+$kunjungan = bukutamu("
+    SELECT buku_tamu.*, anggota.nama 
+    FROM buku_tamu 
+    JOIN anggota ON buku_tamu.nim = anggota.nim
+");
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -47,7 +52,9 @@ $anggota = anggota("SELECT * FROM buku_tamu");
         <div class="menu" id="menu">
             <a href="../"><i class='bx bxs-home'></i>Dashboard</a>
             <a href="../anggota/index.php"><i class='bx bxs-user'></i>Anggota</a>
-            <a href="index.php"><i class='bx bxs-book'></i>Buku Tamu</a>
+            <a href="index.php"
+                style="background-color: #0B85AE; color: white; border-radius: 0 20px 20px 0; position: relative; left: -20px; padding-left: 40px;"><i
+                    class='bx bxs-book'></i>Buku Tamu</a>
         </div>
         <div class="akhir">
             <a href="logout.php"><i class='bx bxs-log-out'></i> Keluar</a>
@@ -74,7 +81,7 @@ $anggota = anggota("SELECT * FROM buku_tamu");
             </thead>
             <tbody>
                 <?php $no = 1; ?>
-                <?php foreach ($anggota as $row): ?>
+                <?php foreach ($kunjungan as $row): ?>
                     <tr>
                         <td><?= $no; ?></td>
                         <td><?= $row["nim"] ?></td>
@@ -84,8 +91,9 @@ $anggota = anggota("SELECT * FROM buku_tamu");
                         <td><?= $row["jam_keluar"] ?></td>
                         <td><?= $row["keperluan"] ?></td>
                         <td class="aksi">
-                            <a href="edit.php?nim=<?= $row['nim']; ?>" class="edit"><i class='bx bx-edit'></i></a>
-                            <form action="CRUD/delete.php" method="get" onsubmit="return confirmDelete('<?= $row['nim']; ?>')">
+                            <a href="edit.php?id=<?= $row['id']; ?>" class="edit"><i class='bx bx-edit'></i></a>
+                            <form action="CRUD/delete.php" method="get"
+                                onsubmit="return confirmDelete('<?= $row['nim']; ?>')">
                                 <input type="hidden" name="nim" value="<?= $row['nim']; ?>">
                                 <button type="submit" class="hapus"><i class='bx bx-trash'></i></button>
                             </form>
