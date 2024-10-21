@@ -191,6 +191,7 @@ th {
     margin: 0;
     border-radius: 5px; /* Optional: rounded edges */
     margin-top: 5px;
+    cursor: pointer;
 }
 
 .hapus i {
