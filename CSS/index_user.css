@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(../Images/bg.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    display: block;
+    text-align: center;
+    height: 500px;
+    width: 600px;
+    background-color: #d9f7f5;
+    padding: 20px 60px;
+    border-radius: 15px;
+    color: #021f2b;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.data_nama {
+    border-radius: 15px;
+    font-weight: bold;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 20px;
+
+    background-color: #04364A;
+    color: white;
+    width: 100%;
+    text-align: left;
+}
