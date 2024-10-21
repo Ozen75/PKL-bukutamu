@@ -5,6 +5,7 @@ include '../../config/koneksi.php';
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@ include '../../config/koneksi.php';
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Tambah Anggota</title>
 </head>
+
 <body>
     <!-- Navbar -->
     <section class="navbar">
@@ -27,13 +29,13 @@ include '../../config/koneksi.php';
             <img src="../../Images/logo_pro_asta.png" alt="logo" class="logo_asta">
             <h1>Buku Tamu</h1>
         </div>
-        <div class="menu" id="menu">    
+        <div class="menu" id="menu">
             <a href="../"><i class='bx bxs-home'></i>Dashboard</a>
             <a href="index.php"><i class='bx bxs-user'></i>Anggota</a>
             <a href="../buku tamu/index.php"><i class='bx bxs-book'></i>Buku Tamu</a>
         </div>
         <div class="akhir">
-            <a href="logout.php"><i class='bx bxs-log-out'></i> Keluar</a>
+            <a href="../../config/logout.php"><i class='bx bxs-log-out'></i> Keluar</a>
         </div>
     </section>
 
@@ -84,4 +86,5 @@ include '../../config/koneksi.php';
         </form>
     </section>
 </body>
+
 </html>

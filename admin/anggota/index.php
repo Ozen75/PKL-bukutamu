@@ -28,9 +28,12 @@ foreach ($buku_tamu as $bt) {
     <style>
         /* Tambahkan style untuk tombol hapus yang disabled */
         .disabled-btn {
-            background-color: #d3d3d3; /* Warna abu-abu */
-            color: #888; /* Warna teks lebih pucat */
-            cursor: not-allowed; /* Tampilkan kursor tidak diizinkan */
+            background-color: #d3d3d3;
+            /* Warna abu-abu */
+            color: #888;
+            /* Warna teks lebih pucat */
+            cursor: not-allowed;
+            /* Tampilkan kursor tidak diizinkan */
         }
     </style>
 
@@ -63,11 +66,13 @@ foreach ($buku_tamu as $bt) {
         </div>
         <div class="menu" id="menu">
             <a href="../dashboard.php"><i class='bx bxs-home'></i>Dashboard</a>
-            <a href="index.php" style="background-color: #0B85AE; color: white; border-radius: 0 20px 20px 0; position: relative; left: -20px; padding-left: 40px;"><i class='bx bxs-user'></i>Anggota</a>
+            <a href="index.php"
+                style="background-color: #0B85AE; color: white; border-radius: 0 20px 20px 0; position: relative; left: -20px; padding-left: 40px;"><i
+                    class='bx bxs-user'></i>Anggota</a>
             <a href="../buku tamu/index.php"><i class='bx bxs-book'></i>Buku Tamu</a>
         </div>
         <div class="akhir">
-            <a href="logout.php"><i class='bx bxs-log-out'></i> Keluar</a>
+            <a href="../../config/logout.php"><i class='bx bxs-log-out'></i> Keluar</a>
         </div>
     </section>
 
@@ -105,13 +110,15 @@ foreach ($buku_tamu as $bt) {
                         <td><?= $row["angkatan"] ?></td>
                         <td class="aksi">
                             <a href="edit.php?nim=<?= $row['nim']; ?>" class="edit"><i class='bx bx-edit'></i></a>
-                            
+
                             <!-- Tombol hapus, di-disable jika terkait dengan buku tamu -->
-                            <form action="CRUD/delete.php" method="get" onsubmit="return confirmDelete('<?= $row['nim']; ?>', <?= in_array($row['nim'], $buku_tamu_nim) ? 'true' : 'false'; ?>)">
+                            <form action="CRUD/delete.php" method="get"
+                                onsubmit="return confirmDelete('<?= $row['nim']; ?>', <?= in_array($row['nim'], $buku_tamu_nim) ? 'true' : 'false'; ?>)">
                                 <input type="hidden" name="nim" value="<?= $row['nim']; ?>">
-                                
+
                                 <!-- Tambahkan class 'disabled-btn' jika anggota terhubung dengan buku tamu -->
-                                <button type="submit" class="hapus <?= in_array($row['nim'], $buku_tamu_nim) ? 'disabled-btn' : ''; ?>">
+                                <button type="submit"
+                                    class="hapus <?= in_array($row['nim'], $buku_tamu_nim) ? 'disabled-btn' : ''; ?>">
                                     <i class='bx bx-trash'></i>
                                 </button>
                             </form>

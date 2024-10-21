@@ -42,7 +42,7 @@ if (isset($_GET['nim'])) {
             <a href="../buku tamu/index.php"><i class='bx bxs-book'></i>Buku Tamu</a>
         </div>
         <div class="akhir">
-            <a href="logout.php"><i class='bx bxs-log-out'></i> Keluar</a>
+            <a href="../../config/logout.php"><i class='bx bxs-log-out'></i> Keluar</a>
         </div>
     </section>
 
@@ -60,7 +60,8 @@ if (isset($_GET['nim'])) {
             </div>
             <div class="form-group">
                 <label for="jenis_kelamin">Jenis Kelamin</label>
-                <select name="jenis_kelamin" id="jenis_kelamin" value="<?= $anggota[0]["jenis_kelamin"]; ?>" class="form-select">
+                <select name="jenis_kelamin" id="jenis_kelamin" value="<?= $anggota[0]["jenis_kelamin"]; ?>"
+                    class="form-select">
                     <option value="laki laki">Laki Laki</option>
                     <option value="perempuan">Perempuan</option>
                 </select>

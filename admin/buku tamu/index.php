@@ -57,7 +57,7 @@ $kunjungan = bukutamu("
                     class='bx bxs-book'></i>Buku Tamu</a>
         </div>
         <div class="akhir">
-            <a href="logout.php"><i class='bx bxs-log-out'></i> Keluar</a>
+        <a href="../../config/logout.php"><i class='bx bxs-log-out' ></i> Keluar</a>
         </div>
     </section>
 
