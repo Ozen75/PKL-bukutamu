@@ -1,6 +1,6 @@
 <?php
 
-include '../../../koneksi.php';
+include '../../../config/koneksi.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nim = $_POST['nim'];
     $nama = $_POST['nama'];

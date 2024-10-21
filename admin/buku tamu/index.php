@@ -1,5 +1,5 @@
 <?php
-include '../../koneksi.php';
+include '../../config/koneksi.php';
 
 $kunjungan = bukutamu("
     SELECT buku_tamu.*, anggota.nama 

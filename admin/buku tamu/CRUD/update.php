@@ -1,6 +1,6 @@
 <?php
 // koneksi database
-include '../../../koneksi.php';
+include '../../../config/koneksi.php';
 
 $id = $_POST['id'];
 $nim = $_POST['nim'];

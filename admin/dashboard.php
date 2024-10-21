@@ -1,6 +1,9 @@
 <?php
 session_start();
-include '../koneksi.php';
+include '../config/koneksi.php';
+if($_SESSION['status']!="login"){
+    header("location:index.php?pesan=belum_login");
+}
 
 $sql_anggota = "SELECT COUNT(*) as total_anggota FROM anggota";
 $result_anggota = $conn->query($sql_anggota);
@@ -46,7 +49,7 @@ $total_buku_tamu = $row_buku_tamu['total_buku_tamu'];
             <a href="buku tamu/index.php"><i class='bx bxs-book'></i>Buku Tamu</a>
         </div>
         <div class="akhir">
-            <a href="logout.php"><i class='bx bxs-log-out' ></i> Keluar</a>
+            <a href="../config/logout.php"><i class='bx bxs-log-out' ></i> Keluar</a>
         </div>
     </section>
 

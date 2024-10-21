@@ -1,5 +1,5 @@
 <?php
-include '../../../koneksi.php';
+include '../../../config/koneksi.php';
 
 if (isset($_GET['nim'])) {
     $nim = mysqli_real_escape_string($conn, $_GET['nim']);
