@@ -14,7 +14,7 @@
         </div>
         <div class="card">
             <a href="pilih_identitas.php"><button class="btn identity">Pilih Identitas</button></a>
-            <button class="btn masuk" disabled>Masuk</button>
+            <!-- <button class="btn masuk" disabled>Masuk</button> -->
         </div>
     </div>
 </body>
