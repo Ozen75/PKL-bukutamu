@@ -56,3 +56,21 @@ body {
     color: white;
     width: 150px;
 }
+
+.masuk:hover {
+    background-color: #038a39;
+}
+
+.kebutuhan {
+    display: flex;
+    flex-direction: column; 
+    margin-bottom: 15px;
+}
+
+.kebutuhan input {
+    padding: 8px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    text-align: center;
+}

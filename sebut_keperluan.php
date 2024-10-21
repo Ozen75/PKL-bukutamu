@@ -29,10 +29,10 @@ if (isset($_GET['nim'])) {
             <input type="hidden" name="nim" value="<?= $anggota[0]['nim']; ?>">
             <input type="hidden" name="tanggal" value="<?= date('Y-m-d'); ?>"> <!-- Tanggal otomatis -->
             <input type="hidden" name="jam_masuk" value="<?= date('H:i:s'); ?>"> <!-- Waktu otomatis untuk jam masuk -->
-
-            <label for="keperluan">Keperluan:</label>
-            <input type="text" name="keperluan" id="keperluan" required>
-            <button class="btn masuk" type="submit">Masuk</button>
+            <div class="kebutuhan">
+                <input type="text" name="keperluan" id="keperluan" placeholder="Isi Keperluan" required>
+            </div>
+                <button class="btn masuk" type="submit">Masuk</button>
         </form>
     </div>
 </body>
