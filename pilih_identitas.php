@@ -1,9 +1,9 @@
 <?php
 include 'config/koneksi.php';
-$anggota = anggota("SELECT * FROM anggota");
 
+// Ubah query ini agar mengurutkan data berdasarkan kolom 'nama' secara ascending (A-Z)
+$anggota = anggota("SELECT * FROM anggota ORDER BY nama ASC");
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">

@@ -23,14 +23,30 @@ body {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 }
 
+.card {
+    max-height: 400px; /* Tentukan tinggi maksimum untuk daftar nama */
+    overflow-y: scroll;  /* Scroll hanya pada Y (vertikal) */
+    padding-right: 10px; /* Menambahkan padding untuk kenyamanan scroll */
+}
+
+/* Hapus style scrollbar di berbagai browser */
+.card::-webkit-scrollbar {
+    width: 0px;  /* Sembunyikan scrollbar di Chrome, Safari, Opera */
+}
+
+.card {
+    -ms-overflow-style: none;  /* Sembunyikan scrollbar di Internet Explorer dan Edge */
+    scrollbar-width: none;     /* Sembunyikan scrollbar di Firefox */
+}
 
 .data_nama {
-    border-radius: 15px;
+    border-radius: 10px;
+    border-style: none;
     font-weight: bold;
     padding: 8px 15px;
     cursor: pointer;
     font-size: 20px;
-
+    margin-bottom: 3px;
     background-color: #04364A;
     color: white;
     width: 100%;
