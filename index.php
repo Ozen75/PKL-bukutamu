@@ -13,7 +13,7 @@
             <img src="images/logo_pro_asta.png" alt="Pro.ASTA Logo">
         </div>
         <div class="card">
-            <button class="btn identity">Pilih Identitas</button>
+            <a href="pilih_identitas.php"><button class="btn identity">Pilih Identitas</button></a>
             <button class="btn masuk" disabled>Masuk</button>
         </div>
     </div>
